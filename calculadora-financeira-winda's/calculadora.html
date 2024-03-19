@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ptbr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Financeira</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="divMensagem">
+        <div class="exirbir-mensagem">
+            <img src="image/btn-img-hotelaria.png" alt="" class="img-icon-lampada"><br>
+            <span class="txt-desc-produto">Quer saber o quanto você pode economizar usando o nosso Sistema?</span><br>
+            <button class="btn-decisao-orcamento" onclick="chamarFormulario()">Prosseguir</button>
+        </div>
+    </div>
+
+   
+</body>
+</html> 
+<script>
+    function chamarFormulario(){
+        divMensagem.innerHTML = `
+        <div class="card">
+            <p class="card-titulo">Economize</p>
+            <hr class="card-linha">
+            <p class="card-pergunta">Qual é a rede de Hotelaria?</p><br>
+            <input type="text" id="inputNomeHotelaria" class="card-input"><br>
+            <p class="card-pergunta">Quantos ar condicionados possui o estabelecimento?</p><br>
+            <input type="text" id="inputQtdArCondicionado" class="card-input"><br>
+            <p class="card-pergunta">Quantas horas costuma ficar ligado?</p><br>
+            <input type="text" id="inputHorasUso" class="card-input"><br>
+            <p class="card-pergunta">Quantas dias costuma ficar ligado?</p><br>
+            <input type="text" id="inputDiasUso" class="card-input"><br>
+            <p class="card-pergunta">De quantos BTUs são os aparelhos?</p><br>
+            <select id="selectBtu" class="card-select">
+                <option value="7000">7000 BTU</option>
+                <option value="9000">9000 BTU</option>
+                <option value="12000">12000 BTU</option>
+                <option value="16000">16000 BTU</option>
+                <option value="20000">20000 BTU</option>
+                <option value="24000">24000 BTU</option>
+                <option value="28000">28000 BTU</option>
+                <option value="32000">32000 BTU</option>
+                <option value="36000">36000 BTU</option>
+                <option value="40000">40000 BTU</option>
+                <option value="48000">48000 BTU</option>
+                <option value="56000">56000 BTU</option>
+            </select> <br<br>
+            <button class="btn-calculo-investidor-cliente" onclick="calcularEconomia()">Calcular</button>
+        </div>
+        `;
+    }
+
+    function calcularEconomia(){
+        let nomeHotelaria = inputNomeHotelaria.value;
+        let qtdArCondicionado = Number(inputQtdArCondicionado.value);
+        let horasUso = Number(inputHorasUso.value);
+        let diasUso = Number(inputDiasUso.value);
+        let btu = Number(selectBtu.value);
+
+        var wattsAr = btu / 0.293;
+        var contaKwHMes = (wattsAr * horasUso) * diasUso / 1000;
+        var gastoFinal = (contaKwHMes * 0.40) * qtdArCondicionado;
+
+        divMensagem.innerHTML = `
+        <div class="card">
+            <p class="card-titulo">Economize</p>
+            <hr class="card-linha">
+            <p class="card-resultado">Olá ${nomeHotelaria}! <br>
+                                    De acordo com os valores mencionados,<br>
+                                    seu gasto em KwH/mes com ar condicionados é de ${contaKwHMes} e<br>
+                                    sua conta poderá reduzir em 90%<br>
+                                    utilizando nosso sistema, ao invés de pagar contas de R$${gastoFinal}<br>
+                                    Pagaria contas mais acessiveis de R$${gastoFinal * 0.1}.<br>
+                                    Reduzindo o uso do Ar condicionado em 90%. <br>
+                                    Adquira sua winda!<br>
+                                    O que você esta esperando para ter a praticidade em um sistema<br>
+                                    na palma da sua mão?</p>
+            <button class="btn-compra-investidor-cliente" >Prosseguir com a Compra</button>
+        </div>`;
+    }
+</script>

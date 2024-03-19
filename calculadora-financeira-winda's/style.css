@@ -12,7 +12,7 @@
     margin: 0;
 }
 body{
-    background-image: url("image/imagem-fundo.jpg");
+    background-image: url("image/imagem-fundo.png");
 }
 .exirbir-mensagem{
     display: flex;
@@ -33,40 +33,22 @@ body{
     margin-bottom: 4%;
 }
 .btn-decisao-orcamento{
-    width: 50vw;
+    width: 25vw;
     height: 50px;
     border-radius: 15px;
     font-size: 25px;
-    background-color: black;
+    background-color: #22416B;
     color: #ffffff;
     font-family: 'Bobby Jones Soft';
     border: 0; 
 }
+
 .btn-decisao-orcamento:hover{
     transform: scale(1.1);
 }
-
-.btn-investidor-cliente{
-    background-color: #ffffff;
-    font-size: 30px;
-    width: 25%;
-    border-radius: 8%;
-    height: 400px;
-    border: 0;
-    margin-top: 8%;
-    margin-left: 15%;
-    font-family: 'Bobby Jones Soft';
-}
-.btn-investidor-cliente:hover{
-    transform: scale(1.1);
-}
-.img-btn-investidor-cliente{
-    width: 50%;
-    margin-bottom: 15%;
-}
 .card{
     display: flex;
-    width: 35%;
+    width: 40%;
     background-color: #ffffff;
     margin-top: 8%;
     margin-left: 32%;
@@ -74,9 +56,10 @@ body{
     flex-direction: column;
     align-items: center;
     border-radius: 25px;
+    margin-bottom: 8%;
 }
 .card-titulo{
-    color: #294441;
+    color: #22416B;
     font-size: 40px;
     font-family: 'Rye';
     margin-bottom: 2%;
@@ -86,14 +69,15 @@ body{
     align-self: center;
 }
 .btn-calculo-investidor-cliente{
-    background-color: black;
+    background-color: #22416B;
     color: #ffffff;
     font-family: 'Bobby Jones Soft';
     margin-bottom: 4%;
     border: 0;
     border-radius: 15px;
     font-size: 120%;
-    width: 30%;
+    width: 15vw;
+    height: 5vh;
     margin-top: 2%;
 }
 .btn-calculo-investidor-cliente:hover{
@@ -112,7 +96,7 @@ body{
     width: 45%;
 }
 .btn-compra-investidor-cliente{
-    background-color: black;
+    background-color: #22416B;
     color: #ffffff;
     font-family: 'Bobby Jones Soft';
     margin-bottom: 4%;
@@ -130,4 +114,13 @@ body{
     margin-top: 4%;
     margin-bottom: 2%;
     font-size: 130%;
+}
+.card-select{
+    padding: 8px; 
+  font-size: 16px; 
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  width: 200px;
+  margin-bottom: 4%;
 }
