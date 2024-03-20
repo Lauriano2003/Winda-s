@@ -59,7 +59,7 @@
         let diasUso = Number(inputDiasUso.value);
         let btu = Number(selectBtu.value);
 
-        var wattsAr = btu / 0.293;
+        var wattsAr = btu * 0.293;
         var contaKwHMes = (wattsAr * horasUso) * diasUso / 1000;
         var gastoFinal = (contaKwHMes * 0.40) * qtdArCondicionado;
 
