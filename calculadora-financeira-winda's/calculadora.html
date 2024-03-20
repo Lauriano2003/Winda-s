@@ -69,15 +69,15 @@
             <hr class="card-linha">
             <p class="card-resultado">Olá ${nomeHotelaria}! <br>
                                     De acordo com os valores mencionados,<br>
-                                    seu gasto em KwH/mes com ar condicionados é de ${contaKwHMes} e<br>
+                                    seu gasto em KwH/mes com ar condicionados é de ${contaKwHMes.toFixed(2)}Kwh/mes e<br>
                                     sua conta poderá reduzir em 90%<br>
-                                    utilizando nosso sistema, ao invés de pagar contas de R$${gastoFinal}<br>
-                                    Pagaria contas mais acessiveis de R$${gastoFinal * 0.1}.<br>
+                                    utilizando nosso sistema, ao invés de pagar contas de R$${gastoFinal.toFixed(2)}<br>
+                                    Pagaria contas mais acessiveis de R$${(gastoFinal * 0.1).toFixed(2)}.<br>
                                     Reduzindo o uso do Ar condicionado em 90%. <br>
-                                    Adquira sua winda!<br>
+                                    Adquira sua Winda!<br>
                                     O que você esta esperando para ter a praticidade em um sistema<br>
                                     na palma da sua mão?</p>
             <button class="btn-compra-investidor-cliente" >Prosseguir com a Compra</button>
         </div>`;
     }
-</script>
+</script> 
