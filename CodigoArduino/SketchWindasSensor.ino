@@ -14,7 +14,7 @@ void setup() {
 void loop() {
   float umidade = dht_1.readHumidity(); // Define variavel Umidade com valor Float da biblioteca DHT
   float temperatura = dht_1.readTemperature(); // Define variavel Temperatura com valor Float da biblioteca DHT
-  Serial.print("Status:") //imprime no monitor Serial Status
+  Serial.print("Status:"); //imprime no monitor Serial Status
   if(digitalRead(pinoSensor) == LOW){ // Se o sensor detectar algo.
   Serial.print(1); // Imprime 1 para sim no monitor serial 
   Serial.print(" , "); // separa os valores no monitor serial
