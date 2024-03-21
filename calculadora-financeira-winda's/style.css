@@ -22,13 +22,13 @@ body{
     margin-top: 2%;
 }
 .img-icon-lampada{
-    width: 50%;
+    width: 30%;
     margin-bottom: 2%;
 }
 .txt-desc-produto{
-    font-size: 200%;
+    font-size: 3rem;
     color: #ffffff;
-    font-family: 'Rye';
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin-bottom: 1%;
 }
 .btn-decisao-orcamento{
@@ -42,12 +42,13 @@ body{
     border: 0; 
 }
 
+
 .btn-decisao-orcamento:hover{
     transform: scale(1.1);
 }
 .card{
     display: flex;
-    width: 52%;
+    width: 57%;
     background-color: #ffffff;
     margin-top: 8%;
     margin-left: 25%;
@@ -59,8 +60,8 @@ body{
 }
 .card-titulo{
     color: #22416B;
-    font-size: 300%;
-    font-family: 'Rye';
+    font-size: 3rem;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin-bottom: 2%;
 }
 .card-linha{
