@@ -1,12 +1,12 @@
-#include "DHT.h" // Biblioteca DHT11
+#include "DHT.h" // Biblioteca do DHT
 #define dht_type DHT11 //Definir tipo DHT11
 
 int dht_pin = A0; // Definir Pino Analogico 0 para sensor DHT
 DHT dht_1 = DHT(dht_pin, dht_type); // Declarar tipo do dht
-int pinoSensor = 7; // Definir Pino Digital do sensor XXXX
+int pinoSensor = 7; // Definir Pino Digital do sensor TCRT5000
 
 void setup() {
-  pinMode(pinoSensor, INPUT); //Iniciar entrada do Pino do sensor XXXX
+  pinMode(pinoSensor, INPUT); //Iniciar entrada do Pino do sensor TCRT5000
   Serial.begin(9600); // Define a taxa de bits em 9600 p/ Seg.
   dht_1.begin(); // inicia dht 1
 }
