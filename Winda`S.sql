@@ -1,4 +1,3 @@
-drop database windas;
 
 create database windas;
 
